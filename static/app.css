@@ -1,0 +1,84 @@
+/* body {
+    padding: 100px;
+    box-sizing: border-box;
+}
+
+.scrollable {
+    height: fit-content;
+} */
+
+/* .scrollable{
+    overflow-y: scroll !important;
+} */
+
+/* html {
+    overflow-y: scroll;
+    overflow-x: hidden;
+} */
+
+
+/* body {
+    position: absolute;
+} */
+
+/* .main {
+    margin-top: 60px;
+    overflow: hidden;
+} */
+
+
+
+.container-fluid {
+    position: absolute;
+}
+
+.bg-turqoise {
+    background-color: #22b573;
+}
+
+.btn-cream {
+    background-color: #f0ba7d !important;
+}
+
+ 
+.drag-area {
+    border: 3px dashed #fed298;
+}
+
+.drag-area .icon {
+    font-size: 3.125rem; /* 50px */
+    color: #fed298;
+}
+
+.drag-area .header {
+    font-size: 1.25rem; /* 20px */
+    font-weight: 500;
+    color: #34495e;
+}
+
+.drag-area .support {
+    font-size: 0.75rem; /* 12px */
+    color: gray;
+    margin: 0.625rem 0 0.9375rem 0; /* 10px 0 15px 0 */
+}
+
+.drag-area .button {
+    color: #fed298;
+    cursor: pointer;
+}
+
+.drag-area.active {
+    border: 2px solid #fed298;
+}
+
+.drag-area img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.min-vh-100 {
+    min-height: 100vh;
+}
+
+

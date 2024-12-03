@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Retina Disease Detection</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="static/app.css" />
+  </head>
+
+  <body>
+    <div
+      class="container-fluid position-relative min-vh-100 d-flex justify-content-center align-items-center bg-turqoise"
+    >
+      <div
+        class="container bg-white h-75 position-relative rounded"
+        style="margin-top: 125px; margin-bottom: 125px;"
+      >
+        <div class="d-flex justify-content-center align-items-center p-5">
+          <img
+            src="static/eye3.png"
+            alt="Eye"
+            class="position-absolute"
+            style="
+              position: absolute;
+              width: 14rem;
+              top: -7rem;
+              left: 50%;
+              transform: translateX(-50%);
+            "
+          />
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-6">
+            <form
+              id="imageUploadForm"
+              action="/predict"
+              method="POST"
+              enctype="multipart/form-data"
+            >
+              <div
+                class="drag-area d-flex justify-content-center align-items-center d-flex flex-column my-3 p-3"
+              >
+                <div class="icon">
+                  <i class="fas fa-images"></i>
+                </div>
+
+                <input type="file" hidden />
+                <h3 class="header">
+                  <span class="button">Choose the file</span>
+                </h3>
+                <p>or drop the file here</p>
+
+                <span class="support">Supports: JPEG, JPG, PNG</span>
+              </div>
+              <button
+                id="submit"
+                type="submit"
+                class="btn btn-cream w-100"
+                disabled
+              >
+                Predict
+              </button>
+            </form>
+            <div id="results">
+              <p class="fs-4 lead mt-2">Results:</p>
+              <p id="predictedClass"></p>
+              <p id="confidence"></p>
+              <p id="label"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="static/app.js"></script>
+  </body>
+</html>
